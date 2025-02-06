@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Documentation
+nav:
+  - Home: index.md
+  - Documentation Review: Review
+  - Redocumentation: Redocument

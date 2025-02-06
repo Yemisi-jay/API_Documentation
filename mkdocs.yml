@@ -1,5 +1,13 @@
-site_name: Documentation
+site_name: Woodcore Documentation
 nav:
   - Home: index.md
-  - Documentation Review: Review
-  - Redocumentation: Redocument
+  - Documentation Review: review.md
+  - "Wood core Atlas API":
+    - API Headers: API_headers.md
+    - Pagination: pagination.md
+    - Versioning: versioning.md
+    - Sorting: sorting.md
+    - Reference: reference.md
+  - "Customer":
+    - Customer Overview: Customer.md
+theme: readthedocs

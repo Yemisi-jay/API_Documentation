@@ -4,7 +4,7 @@ You can use the `orderBy` parameter to specify the order of records in the respo
 
 ### Ascending Order
 
-By default, results are returned in ascending order. For example, to return a list of transactions in ascending order (oldest first), use the following syntax:
+By default, results are sorted in ascending order. For example, to return a list of transactions in ascending order (oldest first), you can use the following syntax: `{parameter}={value}`. In this case, `orderBy=date`.
 
 ``` bash
 
@@ -13,7 +13,7 @@ curl --location --request GET 'https://api.test.woodcoreapp.com/api/v1/clients?o
 ```
 ### Descending Order
 
-To return results in descending order, prepend a `-`(negative sign) to the parameter value. For example, to return the same list of transactions with the newest transactions first, use the following syntax:
+To return results in descending order, prepend a `-`(negative sign) to the parameter value. For example, to return the same list of transactions with the newest transactions first, use the following syntax: `orderBy=date`.
 
 ``` bash
 

@@ -1,34 +1,22 @@
 ##  API Versioning  
 
-We regularly release new, dated versions of the API to introduce enhancements and fixes. While we aim to maintain **backward compatibility**, some updates may require breaking changes to improve the system.  
+We regularly release new, dated versions of the API to introduce enhancements and fixes. While we aim to maintain **backward compatibility** changes, some updates may require breaking changes iterate on the API.  
 
 ---
 
-### 🔄 Backward-Compatible Changes  
+### Type of Backward-Compatible Changes  
 
 The following types of updates will **not** break existing integrations:  
 
-✅ **New Features & Enhancements:**  
-- Adding new API endpoints  
-- Introducing optional parameters to existing endpoints  
-- Expanding API responses with new data elements  
-
-✅ **Response & Format Updates:**  
-- Adding new response codes  
-- Introducing new enumeration (enum) values  
-
-✅ **Minor Structural Adjustments:**  
-- Modifying the length or format of an API identifier  
-
----
-
-### ⚠️ Handling Breaking Changes  
-
-If a breaking change is required, we ensure proper **versioning and documentation** to help you transition smoothly. These changes may include:  
-
-- Removing an existing API endpoint  
-- Modifying required request parameters  
-- Changing response structures significantly  
+✅ **New Features & Enhancements:**
+<ul>
+<li> Adding new API endpoints</li>  
+<li> Introducing optional parameters to existing endpoints</li>  
+<li> Expanding API responses with new data elements</li>  
+<li> Adding new response codes</li>  
+<li> Introducing new enumeration (enum) values</li>  
+<li> Modifying the length or format of an API identifier</li>   
+</ul>
 
 ---
 

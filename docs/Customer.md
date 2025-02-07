@@ -2,8 +2,14 @@
 
 Customers on **Woodcore** are your end-users. They can be **individual** customers or **corporate** customers that make use of your product. The first point of entry in banking is gathering customer information, often referred to as the **Customer Information File (CIF)**.
 
->  **Classic Example:**
-> Think of Mark as an individual customer, Single signatory to an account.
+<blockquote style="background-color: lightcyan; padding: 20px; border-left: 5px solid green; border-radius: 5px;"> 
+<strong>👍<span style="color: green;">Classic Example</span></strong><br>
+Think of <strong>Mark</strong> as an individual customer, Single signatory to an account.
+</blockquote>
+
+<blockquote style="background-color: floralwhite; padding: 20px; border-left: 5px solid sandybrown; border-radius: 5px;">
+🚧 Customer can be created in a <bold>Pending</bold> or <bold>Active</bold> state
+</blockquote>
 
 ##### Customer Types
 
@@ -19,8 +25,10 @@ Customers on **Woodcore** are your end-users. They can be **individual** custome
   - Use the following field:
     - `fullname`
 
-> **Classic Example:**  
-> Think of *Mark* as an individual customer, acting as the sole signatory to an account.
+<blockquote style="background-color: lightcyan; padding: 20px; border-left: 5px solid green; border-radius: 5px;"> 
+<strong>👍<span style="color: green;">Classic Example</span></strong><br>
+Think of <strong>Mark</strong> as an individual customer, acting as the sole signatory to an account.
+</blockquote>
 
 ---
 
@@ -38,9 +46,10 @@ Customers on **Woodcore** are your end-users. They can be **individual** custome
 
 - **Optional Deposit Account Creation:**  
   When creating a customer for the first time, you have the option to create a deposit account simultaneously.
-  - **Note:**  
+<blockquote style="background-color: gainsboro; padding: 20px; border-left: 5px solid brown; border-radius: 5px;"> 
+📌<strong>Note</strong><br>  
     You can create a customer along with a deposit account and block the account from making transactions until the KYC (Know Your Customer) requirements are met.
-
+</blockquote>
 ---
 
 ### Client Type Specification
@@ -67,8 +76,6 @@ Customers on **Woodcore** are your end-users. They can be **individual** custome
 
 > ### Tier Level Configuration
 >
-> - You can configure a client's **tierLevel**:
->  - Directly via the WoodCore console during customer creation.
->  - Alternatively, through the provided APIs.
+>You can configure a client's **tierLevel** directly via the WoodCore console during customer creation. Alternatively, through the provided APIs.
 
 ---

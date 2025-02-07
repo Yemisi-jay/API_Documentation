@@ -3,10 +3,10 @@
 ## 🔑 API Keys 🌍
 The API authorization keys can be generated from the console once access has been granted.
 
-| **Header**       | **Description**                                    |
-|-----------------|------------------------------------------------|
-| **Authorization** | Bearer token supplied to you on request         |
-| **Content-Type** | Set content-type to `application/json`         |
+| **Header**        | **Description**                                  |
+|-------------------|--------------------------------------------------|
+| **Authorization** | Bearer token supplied to you on request          |
+| **Content-Type**  | Set content-type to `application/json`           |
 
 ---
 

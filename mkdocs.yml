@@ -3,11 +3,11 @@ nav:
   - Home: index.md
   - Documentation Review: review.md
   - "Wood core Atlas API":
-    - API Headers: API_headers.md
-    - Pagination: pagination.md
-    - Versioning: versioning.md
-    - Sorting: sorting.md
     - Reference: reference.md
+    - Sorting: sorting.md
+    - Versioning: versioning.md
+    - Pagination: pagination.md
+    - API Headers: API_headers.md
   - "Customer":
     - Customer Overview: Customer.md
 theme: readthedocs

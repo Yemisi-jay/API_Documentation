@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Customer Overview - Woodcore Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Customer Overview";
+        var mkdocs_page_input_path = "Customer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Woodcore Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../review/">Documentation Review</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Wood core Atlas API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sorting/">Sorting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../versioning/">Versioning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_headers/">API Headers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Customer</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Customer Overview</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#customer-types">Customer Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#customer-status">Customer Status</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#account-creation-workflow">Account Creation Workflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#client-type-specification">Client Type Specification</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#address-configuration">Address Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tier-level-configuration">Tier Level Configuration</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Woodcore Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Customer</li>
+      <li class="breadcrumb-item active">Customer Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="customer-overview">Customer Overview ✨</h1>
+<p>Customers on <strong>Woodcore</strong> are your end-users. They can be <strong>individual</strong> customers or <strong>corporate</strong> customers that make use of your product. The first point of entry in banking is gathering customer information, often referred to as the <strong>Customer Information File (CIF)</strong>.</p>
+<blockquote style="background-color: lightcyan; padding: 20px; border-left: 5px solid green; border-radius: 5px;"> 
+<strong>👍<span style="color: green;">Classic Example</span></strong><br>
+Think of <strong>Mark</strong> as an individual customer, Single signatory to an account.
+</blockquote>
+
+<blockquote style="background-color: floralwhite; padding: 20px; border-left: 5px solid sandybrown; border-radius: 5px;">
+🚧 Customer can be created in a <bold>Pending</bold> or <bold>Active</bold> state
+</blockquote>
+
+<h5 id="customer-types">Customer Types</h5>
+<ul>
+<li><strong>Individual Customers</strong>  </li>
+<li>Represent a single signatory, e.g., Mark.</li>
+<li>
+<p>Use the following fields:</p>
+<ul>
+<li><code>firstname</code></li>
+<li><code>middlename</code> (optional)</li>
+<li><code>lastname</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Corporate Customers</strong>  </p>
+</li>
+<li>Represent a business or any entity known by a single name.</li>
+<li>Use the following field:<ul>
+<li><code>fullname</code></li>
+</ul>
+</li>
+</ul>
+<blockquote style="background-color: lightcyan; padding: 20px; border-left: 5px solid green; border-radius: 5px;"> 
+<strong>👍<span style="color: green;">Classic Example</span></strong><br>
+Think of <strong>Mark</strong> as an individual customer, acting as the sole signatory to an account.
+</blockquote>
+
+<hr />
+<h3 id="customer-status">Customer Status</h3>
+<ul>
+<li>
+<p><strong>Pending:</strong><br />
+  Customers can be created with a pending status.</p>
+</li>
+<li>
+<p><strong>Active:</strong><br />
+  Customers can also be created directly in an active state.</p>
+</li>
+</ul>
+<hr />
+<h3 id="account-creation-workflow">Account Creation Workflow</h3>
+<ul>
+<li><strong>Optional Deposit Account Creation:</strong><br />
+  When creating a customer for the first time, you have the option to create a deposit account simultaneously.</li>
+</ul>
+<blockquote style="background-color: gainsboro; padding: 20px; border-left: 5px solid brown; border-radius: 5px;"> 
+📌<strong>Note</strong><br>  
+    You can create a customer along with a deposit account and block the account from making transactions until the KYC (Know Your Customer) requirements are met.
+</blockquote>
+<hr />
+<h3 id="client-type-specification">Client Type Specification</h3>
+<ul>
+<li><strong>clientType Field:</strong><br />
+  This field is used to specify the kind of customer:</li>
+<li><code>individual</code></li>
+<li><code>corporate</code></li>
+</ul>
+<hr />
+<h3 id="address-configuration">Address Configuration</h3>
+<ul>
+<li>
+<p><strong>Enabling Address Information:</strong><br />
+  If address information is enabled (<code>_isAddressEnabled=true</code>), the customer's address can be captured following the specified parameters.</p>
+</li>
+<li>
+<p><strong>To Enable Address on the WoodCore Console:</strong></p>
+<ol>
+<li>Navigate to <strong>Configuration</strong></li>
+<li>Select <strong>Utilities</strong></li>
+<li>Go to <strong>Configuration</strong></li>
+<li>Choose <strong>Enable-Address</strong></li>
+</ol>
+</li>
+</ul>
+<hr />
+<blockquote>
+<h3 id="tier-level-configuration">Tier Level Configuration</h3>
+<p>You can configure a client's <strong>tierLevel</strong> directly via the WoodCore console during customer creation. Alternatively, through the provided APIs.</p>
+</blockquote>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../API_headers/" class="btn btn-neutral float-left" title="API Headers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../API_headers/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

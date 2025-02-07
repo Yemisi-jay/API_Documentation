@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Reference - Woodcore Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Reference";
+        var mkdocs_page_input_path = "reference.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Woodcore Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../review/">Documentation Review</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Wood core Atlas API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#api-design">API Design 🔥</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-protocol">API Protocol</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#request-response-format">Request &amp; Response Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#security">Security</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sorting/">Sorting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../versioning/">Versioning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_headers/">API Headers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Customer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Customer/">Customer Overview</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Woodcore Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Wood core Atlas API</li>
+      <li class="breadcrumb-item active">Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="reference">Reference</h1>
+<h2 id="api-design">API Design 🔥</h2>
+<p>The <strong>WoodCore API</strong> is organized around <a href="https://en.wikipedia.org/wiki/REST">REST</a>. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, produces JSON-encoded reponses, and adheres to standard HTTP response codes, authentication, and verbs.</p>
+<p>You can use the <strong>WoodCore API</strong> for free in <strong>Sandbox</strong> mode. This has no effect on your data in Production mode, nor does it interact with any production instance from the financial service offerings. It is a test-only environment.</p>
+<p><strong>Production mode</strong> offers: Full, unlimited access to every feature in your selected plan and begins processing live requests when in use </p>
+<blockquote style="background-color:  cornsilk; padding: 10px; border-left: 5px solid #f5c6cb; border-radius: 5px;">
+🚧 Important: 
+The <strong>API</strong> key you use for authentication determines whether your request runs in <strong>Sandbox</strong> or <strong>Production mode</strong>.  
+API keys for Sandbox and Production environments are available upon request at <a href="mailto:hello@woodcoreapp.com">hello@woodcoreapp.com.</a>
+</blockquote>
+
+<blockquote style="background-color: aliceblue; padding: 20px; border-left: 5px solid skyblue ; border-radius: 5px;">
+📘 API Key Format: <br>
+<strong>Sandbox keys</strong>, starts with <code>wc_test_{{api_key}}</code><br>
+<strong>Production/Live keys</strong>, starts with <code>wc_live_{{api_key}}</code>  
+</blockquote>
+
+<hr />
+<h2 id="api-protocol">API Protocol</h2>
+<p>The WoodCore API adheres to the <strong>REST</strong> standard making use of HTTP techniques outlined by the <a href="https://datatracker.ietf.org/doc/html/rfc2616">RFC 2616</a> protocol. it uses <code>GET</code> and <code>POST</code> requests, returns HTTP <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">response codes</a> indicating status and errors.</p>
+<h3 id="request-response-format"><strong>Request &amp; Response Format</strong></h3>
+<ul>
+<li>All responses are in <a href="https://www.json.org/json-en.html">JSON</a> format </li>
+<li>All requests <strong>must</strong> include: <code>Content-Type: application/json</code> header and a valid JSON body (when required)  </li>
+</ul>
+<h3 id="security"><strong>Security</strong></h3>
+<p>The WoodCore API is served over <strong>HTTPS TLS v1.2</strong> for <strong>data privacy</strong>; HTTP or HTTPS with TLS equal 1.1 and below are not supported. </p>
+<blockquote style="background-color: floralwhite; padding: 20px; border-left: 5px solid brown; border-radius: 5px;"> 
+❗ Security Notice: 
+The <strong>API</strong> only supports secure communications over <strong>HTTPS TLS v1.2</strong> to ensure data privacy.  
+Connections using <strong>HTTP</strong> or <strong>HTTPS</strong> with <strong>TLS</strong> under <strong>v1.2</strong> are not supported and will be rejected.  
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../review/" class="btn btn-neutral float-left" title="Documentation Review"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sorting/" class="btn btn-neutral float-right" title="Sorting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../review/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sorting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

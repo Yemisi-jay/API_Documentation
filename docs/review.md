@@ -9,3 +9,7 @@ The most intriguing part for me is the inclusion of code snippete in several pro
 
 ###### Coherence:
 The guides are organized in a logical progression, from introductory materials to advanced usage scenarios.
+
+____
+
+❗ **Note:**

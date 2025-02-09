@@ -1,8 +1,8 @@
-site_name: Woodcore Documentation
+site_name: WoodCore Documentation
 nav:
   - Home: index.md
   - Documentation Review: review.md
-  - "Wood core Atlas API":
+  - "WoodCore Atlas API":
     - Reference: reference.md
     - Sorting: sorting.md
     - Versioning: versioning.md
@@ -10,4 +10,23 @@ nav:
     - API Headers: API_headers.md
   - "Customer":
     - Customer Overview: Customer.md
-theme: readthedocs
+
+
+theme:
+  name: readthedocs
+  pallette:
+    scheme: light
+    primary: indigo
+    accent: deep-orange
+    copy_button: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - codehilite
+
+plugins:
+  - search

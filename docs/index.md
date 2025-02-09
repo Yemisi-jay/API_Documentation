@@ -9,7 +9,7 @@ The messaging is clear and geared towards both technical and non-technical audie
 ----
 
 #### Clarity
-The homepage provides a strong first impression with a well-organised layout.
+The homepage provides a strong first impression with a well-organised layout and beautiful interface.
 The website is well-organized, with simple menus and obvious calls-to-action (CTAs) like **"Request a Demo"** and **"Contact Us."**
 
 ____

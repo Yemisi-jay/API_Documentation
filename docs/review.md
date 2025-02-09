@@ -13,6 +13,6 @@ The guides are organized in a logical progression, from introductory materials t
 ____
 
 ❗ **Note:**<br>
-As I was in the process of redocumenting the API, the API documentation page became inaccessible on Friday afternoon, prompting a login request. I reached out to the People's Operations Officer, who provided me with the necessary credentials. However, upon attempting to log in, the process repeatedly cycled without granting access to the API documentation.  
+As I was in the process of redocumenting the guide and API, the API documentation page became inaccessible on Friday afternoon, prompting a login request. I reached out to the People's Operations Officer, who provided me with the necessary credentials. However, upon attempting to log in, the process repeatedly cycled without granting access to the API documentation.  
 
 To prevent such issues in the future, I recommend implementing a more robust routing system whenever updates are deployed. Additionally, thorough testing should be conducted to ensure all functionalities remain intact. The Project Manager (PM) should also establish testing as a mandatory step in the standard operating procedures before pushing updates to the live server.

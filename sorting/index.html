@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sorting - Woodcore Documentation</title>
+    <title>Sorting - WoodCore Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Woodcore Documentation
+          <a href=".." class="icon icon-home"> WoodCore Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -47,7 +47,7 @@
                 <li class="toctree-l1"><a class="reference internal" href="../review/">Documentation Review</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Wood core Atlas API</span></p>
+              <p class="caption"><span class="caption-text">WoodCore Atlas API</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a>
                   </li>
@@ -78,14 +78,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Woodcore Documentation</a>
+          <a href="..">WoodCore Documentation</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Wood core Atlas API</li>
+          <li class="breadcrumb-item">WoodCore Atlas API</li>
       <li class="breadcrumb-item active">Sorting</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -99,16 +99,14 @@
 <p>You can use the <code>orderBy</code> parameter to specify the order of records in the response. This allows you to sort the results in ascending or descending order.</p>
 <h3 id="ascending-order">Ascending Order</h3>
 <p>By default, results are sorted in ascending order. For example, to return a list of transactions in ascending order (oldest first), you can use the following syntax: <code>{parameter}={value}</code>. In this case, <code>orderBy=date</code>.</p>
-<pre><code class="language-bash">
-curl --location --request GET 'https://api.test.woodcoreapp.com/api/v1/clients?orderBy=date' \
---header 'Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8'
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://api.test.woodcoreapp.com/api/v1/clients?orderBy=date&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8&#39;</span>
+</code></pre></div>
 <h3 id="descending-order">Descending Order</h3>
 <p>To return results in descending order, prepend a <code>-</code>(negative sign) to the parameter value. For example, to return the same list of transactions with the newest transactions first, use the following syntax: <code>orderBy=date</code>.</p>
-<pre><code class="language-bash">
-curl --location --request GET 'https://api.test.woodcoreapp.com/api/v1/clients?orderBy=-date' \
---header 'Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8'
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://api.test.woodcoreapp.com/api/v1/clients?orderBy=-date&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8&#39;</span>
+</code></pre></div>
               
             </div>
           </div><footer>

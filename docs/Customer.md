@@ -8,69 +8,24 @@ Think of <strong>Mark</strong> as an individual customer, Single signatory to an
 </blockquote>
 
 <blockquote style="background-color: floralwhite; padding: 20px; border-left: 5px solid sandybrown; border-radius: 5px;">
-🚧 Customer can be created in a <bold>Pending</bold> or <bold>Active</bold> state
+🚧 Customer can be created in a <strong>Pending</strong> or <strong>Active</strong> state
 </blockquote>
 
-##### Customer Types
+In an attempt to create a customer for the first time, it is optional to create a deposit account for the customer on the go!. i.e., You can create a customer, a deposit account and block the deposit account from making transactions until KYC requirements are met.
 
-- **Individual Customers**  
-  - Represent a single signatory, e.g., Mark.
-  - Use the following fields:
-    - `firstname`
-    - `middlename` (optional)
-    - `lastname`
-
-- **Corporate Customers**  
-  - Represent a business or any entity known by a single name.
-  - Use the following field:
-    - `fullname`
-
-<blockquote style="background-color: lightcyan; padding: 20px; border-left: 5px solid green; border-radius: 5px;"> 
-<strong>👍<span style="color: green;">Classic Example</span></strong><br>
-Think of <strong>Mark</strong> as an individual customer, acting as the sole signatory to an account.
+<blockquote style="background-color: floralwhite; padding: 20px; border-left: 5px solid sandybrown; border-radius: 5px;"> 
+🚧
+Take note of the <code>clientType</code>. It is useful in specifying the kind of customer, either an <code>individual</code> or <code>corporate</code>customer.
 </blockquote>
 
----
+#### Note:
+<ol>
+<li> You can enter either: <code>firstname</code>, <code>middlename</code>, <code>lastname</code> - for an individual (<code>middlename</code> is optional) OR
+<code>fullname</code> - for a business or corporate body (or person known by one name).</li>
+<li>If address is enabled (<code>_isAddressEnabled=true</code>), then the customer's address can be created following specified parameters for the customer. To enable address on the WoodCore console, go to <i>Configuration</i> —> <i>Utilities</i> —> <i>Configuration</i> —> <i>Enable-Address</i>.</li>
+</ol>
 
-### Customer Status
 
-- **Pending:**  
-  Customers can be created with a pending status.
-
-- **Active:**  
-  Customers can also be created directly in an active state.
-
----
-
-### Account Creation Workflow
-
-- **Optional Deposit Account Creation:**  
-  When creating a customer for the first time, you have the option to create a deposit account simultaneously.
-<blockquote style="background-color: gainsboro; padding: 20px; border-left: 5px solid brown; border-radius: 5px;"> 
-📌<strong>Note</strong><br>  
-    You can create a customer along with a deposit account and block the account from making transactions until the KYC (Know Your Customer) requirements are met.
-</blockquote>
----
-
-### Client Type Specification
-
-- **clientType Field:**  
-  This field is used to specify the kind of customer:
-  - `individual`
-  - `corporate`
-
----
-
-### Address Configuration
-
-- **Enabling Address Information:**  
-  If address information is enabled (`_isAddressEnabled=true`), the customer's address can be captured following the specified parameters.
-  
-  - **To Enable Address on the WoodCore Console:**
-    1. Navigate to **Configuration**
-    2. Select **Utilities**
-    3. Go to **Configuration**
-    4. Choose **Enable-Address**
 
 ---
 

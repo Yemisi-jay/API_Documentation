@@ -8,6 +8,12 @@ nav:
     - Versioning: versioning.md
     - Pagination: pagination.md
     - API Headers: API_headers.md
+    - Response Codes: response_codes.md
+    - Default Parameters: default_parameter.md
+  - "Security":
+      - "Security and Access":
+          - Whitelist an IP Address: whitelist_address.md
+          - Approved Whitelisted IP: whitelisted_ip.md
   - "Customer":
     - Customer Overview: Customer.md
 

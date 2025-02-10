@@ -4,7 +4,7 @@
 ###### Completeness:
 The documentation is comprehensive, it includes detailed descriptions of API endpoints, which is arranged logically by functionality. 
 For each endpoint, examples of requests and responses are given which facilitates better understanding and implementation for the developers.
-The most intriguing part for me is the inclusion of code snippet in several programming languages (such as cURL, Python, PHP, Shell, Node, Ruby etc) this enhances developer usability.
+The most intriguing part for me is the inclusion of code snippet in several programming languages (such as Python, PHP, Shell, Node, Ruby, JavaScript etc) this enhances developer usability.
 
 
 ###### Coherence:

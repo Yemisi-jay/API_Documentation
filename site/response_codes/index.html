@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sorting - WoodCore Documentation</title>
+    <title>Response Codes - WoodCore Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sorting";
-        var mkdocs_page_input_path = "sorting.md";
+        var mkdocs_page_name = "Response Codes";
+        var mkdocs_page_input_path = "response_codes.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -51,13 +51,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../reference/">Reference</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Sorting</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#ascending-order">Ascending Order</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#descending-order">Descending Order</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../sorting/">Sorting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../versioning/">Versioning</a>
                   </li>
@@ -65,7 +59,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../API_headers/">API Headers</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../response_codes/">Response Codes</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Response Codes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#http-status-codes">HTTP Status Codes</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../default_parameter/">Default Parameters</a>
                   </li>
@@ -101,7 +99,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">WoodCore Atlas API</li>
-      <li class="breadcrumb-item active">Sorting</li>
+      <li class="breadcrumb-item active">Response Codes</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -110,24 +108,93 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="sorting">Sorting</h1>
-<p>You can use the <code>orderBy</code> parameter to specify the order of records in the response. This allows you to sort the results in ascending or descending order.</p>
-<h3 id="ascending-order">Ascending Order</h3>
-<p>By default, results are sorted in ascending order. For example, to return a list of transactions in ascending order (oldest first), you can use the following syntax: <code>{parameter}={value}</code>. In this case, <code>orderBy=date</code>.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://api.test.woodcoreapp.com/api/v1/clients?orderBy=date&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8&#39;</span>
-</code></pre></div>
-<h3 id="descending-order">Descending Order</h3>
-<p>To return results in descending order, prepend a <code>-</code>(negative sign) to the parameter value. For example, to return the same list of transactions with the newest transactions first, use the following syntax: <code>orderBy=date</code>.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://api.test.woodcoreapp.com/api/v1/clients?orderBy=-date&#39;</span><span class="w"> </span><span class="se">\</span>
---header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer wc_test_5l0Fk28F2EUWiy01Vs9x7fEDWdYY8zqu90E986m8&#39;</span>
-</code></pre></div>
+                <h1 id="response-codes">Response Codes</h1>
+<hr />
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+<p>Below is a detailed explanation of the response codes used by the WoodCore client and server. Familiarity with these codes will help you better understand API behavior.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Response Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200</strong></td>
+<td>OK</td>
+<td>The request was successful, and everything worked as expected.</td>
+</tr>
+<tr>
+<td><strong>202</strong></td>
+<td>Data Extraction Pending</td>
+<td>The data extraction process is in progress. At this point, you should switch to asynchronous handling using webhook events.</td>
+</tr>
+<tr>
+<td><strong>204</strong></td>
+<td>No Data Extracted</td>
+<td>The account does not have data for the requested reporting period. <br> <strong>Note</strong>: Filters resulting in no data for extracted periods will return an empty array along with a 200 response code.</td>
+</tr>
+<tr>
+<td><strong>400</strong></td>
+<td>Bad Request</td>
+<td>The request was invalid, often due to missing or improperly formatted parameters.</td>
+</tr>
+<tr>
+<td><strong>401</strong></td>
+<td>Unauthorized</td>
+<td>The request lacked valid API keys or access tokens.</td>
+</tr>
+<tr>
+<td><strong>403</strong></td>
+<td>Forbidden</td>
+<td>The API key does not have permission to perform this action or is restricted based on the current billing plan.</td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>Resource Not Found</td>
+<td>The requested resource could not be found.</td>
+</tr>
+<tr>
+<td><strong>409</strong></td>
+<td>Conflict</td>
+<td>The request conflicts with another request.</td>
+</tr>
+<tr>
+<td><strong>429</strong></td>
+<td>Too much requests</td>
+<td>Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.</td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>Server Error</td>
+<td>An unexpected error and could not process your request.</td>
+</tr>
+<tr>
+<td><strong>502</strong></td>
+<td>Bad Gateway</td>
+<td>Invalid response received from serer.</td>
+</tr>
+<tr>
+<td><strong>503</strong></td>
+<td>Service Unavailable</td>
+<td>WoodCore is temporarily offline for maintenance.</td>
+</tr>
+<tr>
+<td><strong>504</strong></td>
+<td>Service Timeout</td>
+<td>The request timed out from the server.</td>
+</tr>
+</tbody>
+</table>
+<p>This guide ensures a clear understanding of the server's response, aiding in effective debugging and implementation of API requests.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../reference/" class="btn btn-neutral float-left" title="Reference"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../versioning/" class="btn btn-neutral float-right" title="Versioning">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../API_headers/" class="btn btn-neutral float-left" title="API Headers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../default_parameter/" class="btn btn-neutral float-right" title="Default Parameters">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -150,10 +217,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../reference/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../API_headers/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../versioning/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../default_parameter/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

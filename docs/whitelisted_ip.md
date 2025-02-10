@@ -48,8 +48,9 @@ This endpoint approves a whitelisted IP address with the use of an OTP in the pa
 
 ----
 
-#### 🔗 Example Request (Python)
-
+#### 🔗 Example Request 
+??? example "python"
+    === "code"
 ```python
 # Install requests library if not installed
 python -m pip install requests

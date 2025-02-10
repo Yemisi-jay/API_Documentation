@@ -40,10 +40,10 @@ This endpoint is responsible for whitelisting an IP address, which is to be atta
 
 
 
-## Code Examples
+### Code Examples
 
-### Python
-
+??? example "python"
+    === "code"
 ```python
 # Install the requests library
 python -m pip install requests
